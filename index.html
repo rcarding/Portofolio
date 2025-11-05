@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Dark Glass UI</title>
+    <link rel="stylesheet" href="design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Latar belakang dinamis akan dibuat dengan CSS Pseudo-element -->
+    <div class="container">
+
+        <!-- ATAS: Banner Video Baru -->
+        <header class="banner-card">
+            <video src="banner.mp4" autoplay muted loop playsinline class="banner-video"></video>
+            <div class="banner-overlay"></div>
+            <div class="banner-content">
+                <h1 class="banner-title">Welcome to My Portofolio.</h1>
+                <p class="banner-text">Exploring creativity through technology and design.</p>
+            </div>
+        </header>
+
+        <!-- KONTEN UTAMA: Grid Tiga Kolom -->
+        <div class="main-content">
+            
+            <!-- KIRI: Panel Video & Perangkat -->
+            <aside class="left-panel">
+                <div class="videos-card glass-card">
+                    <h2 class="section-title-videos">Videos</h2>
+                    <div class="videos-grid">
+                        <!-- KUNCI PERBAIKAN: Menambahkan atribut data-title -->
+                        <a href="video1.mp4" class="video-item lightbox-trigger" data-title="Guitar Cover - CALL ME BACK" data-source-url="https://youtu.be/YhSiqgHC2fQ?si=T9H1O-5iUmLnhp9_">
+                            <video src="video1.mp4" autoplay muted loop playsinline class="video-item-thumb"></video>
+                            <div class="video-item-overlay"></div>
+                            <span>Guitar Cover</span>
+                        </a>
+                        <a href="video2.mp4" class="video-item lightbox-trigger" data-title="AMV Typography" data-source-url="https://youtu.be/93C1MVgwxB4?si=GSjuqoS3VylLSJth">
+                            <video src="video2.mp4" autoplay muted loop playsinline class="video-item-thumb"></video>
+                            <div class="video-item-overlay"></div>
+                            <span>AMV</span>
+                        </a>
+                        <a href="video3.mp4" class="video-item lightbox-trigger" data-title="Cinematic Music Video" data-source-url="https://youtu.be/0A5GgwfVDA8?si=SpeVppM6fgsxf42-">
+                            <video src="video3.mp4" autoplay muted loop playsinline class="video-item-thumb"></video>
+                            <div class="video-item-overlay"></div>
+                            <span>Cinematic</span>
+                        </a>
+                        <a href="video4.mp4" class="video-item lightbox-trigger" data-title="Guitar Cover - Lament of the new world" data-source-url="https://youtu.be/PaXUHqW2AK8?si=bzKIW57Mmx9JLVCP">
+                            <video src="video4.mp4" autoplay muted loop playsinline class="video-item-thumb"></video>
+                            <div class="video-item-overlay"></div>
+                            <span>Guitar Cover</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="device-card glass-card">
+    <h2 class="section-title-pictures">Device & Software</h2>
+    <ul class="device-list">
+        <li>
+            <span>Hardware:</span><br>
+            CPU: Ryzen 5 5500 <br>
+            GPU: RTX 3060 12GB <br>
+            Motherboard: B550 Asrock pro SE <br>
+            PSU: 600W <br>
+            Ram: ddr4 24gb <br>
+            Tablet Drawing: Huion H640p
+        </li>
+        <li>
+            <span>Camera:</span><br>
+            Canon eos 60d <br>
+            Lens: 15-85mm
+        </li>
+        <li>
+            <span>Software:</span><br>
+            Adobe Family, Alight Motion, Capcut
+        </li>
+        <li>
+            <span>Editor Code:</span><br>
+            Visual Studio Code
+        </li>
+    </ul>
+</div>
+</aside>
+
+            <!-- TENGAH: Panel Tentang Saya -->
+            <main class="about-section glass-card">
+                <h1 class="title">About me:</h1>
+                <div class="text-block">
+                    <p>Perkenalkan, nama saya Rafif Ahmad Darmawan. Saya memiliki antusiasme yang besar dalam dunia visual dan teknologi, terutama di bidang</p>
+                    <p>videografi, fotografi, dan editing. Minat ini jugalah yang menuntun saya untuk mendalami jurusan Desain Komunikasi Visual (DKV) di SMK Negeri 1 Tangerang, di mana saya bisa mengasah kemampuan kreatif saya.</p>
+                    <p>Di luar dunia visual, saya juga sangat tertarik untuk mengulik segala hal tentang komputer, baik dari sisi perangkat keras (hardware) maupun perangkat lunak (software).</p>
+                    <p>Perpaduan antara hasrat di bidang kreatif dan ketertarikan pada teknologi ini menjadikan saya pribadi yang tidak hanya menikmati proses penciptaan karya visual, tetapi juga senang mencari solusi teknis untuk mewujudkan ide-ide tersebut.</p>
+                </div>
+            </main>
+            
+            <!-- KANAN: Panel Sosial Media & Fotografi -->
+            <aside class="right-panel"> 
+                <div class="social-card glass-card">
+                    <h2 class="section-title-desktop">social media</h2>
+                    <div class="social-links-container-desktop">
+                        <a href="https://www.instagram.com/rc6rd" target="_blank" class="social-link">Instagram</a>
+                        <a href="https://www.youtube.com/@roasty3" target="_blank" class="social-link">Youtube</a>
+                        <a href="https://www.instagram.com/skysounds.w" target="_blank" class="social-link">Instagram</a>
+                        <a href="https://www.youtube.com/@rc6rd27" target="_blank" class="social-link">Youtube</a>
+                    </div>
+                </div>
+                <div class="photograph-card glass-card">
+                    <h2 class="section-title-photograph">Photograph</h2>
+                    <div class="pictures-grid">
+                        <a href="IMG_8651.jpg" class="picture-item lightbox-trigger" data-title="Totebag Picture" data-source-url="https://www.pexels.com/photo/2662116/">
+                            <img src="IMG_8651.jpg" alt="Mountain lake thumbnail" class="picture-item-thumb">
+                            <div class="picture-item-overlay"></div>
+                            <span>Totebag</span>
+                        </a>
+                        <a href="IMG_0501.JPG" class="picture-item lightbox-trigger" data-title="Picture of Me" data-source-url="https://www.pexels.com/photo/2356045/">
+                            <img src="IMG_0501.JPG" alt="Winter road thumbnail" class="picture-item-thumb">
+                            <div class="picture-item-overlay"></div>
+                            <span>My Picture</span>
+                        </a>
+                        <a href="IMG_9403.JPG" class="picture-item lightbox-trigger" data-title="Taekwondoo moment" data-source-url="https://www.pexels.com/photo/33041/">
+                            <img src="IMG_9403.JPG" alt="Canyon thumbnail" class="picture-item-thumb">
+                            <div class="picture-item-overlay"></div>
+                            <span>Taekwondo</span>
+                        </a>
+                        <a href="IMG_8623.jpg" class="picture-item lightbox-trigger" data-title="Totebag Picture 2" data-source-url="https://www.pexels.com/photo/417344/">
+                            <img src="IMG_8623.jpg" alt="Hot air balloons thumbnail" class="picture-item-thumb">
+                            <div class="picture-item-overlay"></div>
+                            <span>Totebag 2</span>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <!-- Struktur Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content" id="lightbox-content">
+            <!-- KUNCI PERBAIKAN: Header dipindahkan ke dalam kontainer utama -->
+            <div class="lightbox-header">
+                <h3 id="lightbox-title"></h3>
+                <a href="#" id="lightbox-source-link" target="_blank">View Source</a>
+            </div>
+            <div class="lightbox-media-wrapper">
+                <video id="lightbox-video" src="" controls playsinline></video>
+                <img id="lightbox-img" src="" alt="Enlarged view">
+            </div>
+        </div>
+        <span class="lightbox-close">&times;</span>
+    </div>
+
+    <script src="document.js"></script>
+</body>
+</html>
