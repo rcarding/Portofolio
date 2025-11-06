@@ -34,41 +34,45 @@
                 </div>
             </main>
 
-            <!-- KUNCI PERBAIKAN: Kartu Edukasi Baru -->
             <div class="education-card glass-card">
                 <h2 class="section-title-education">Educational Background</h2>
                 <ul class="education-list">
-                    <li>
-                        <span>SMK Negeri 1 Tangerang</span>
-                        <p>Desain Komunikasi Visual (DKV) - (2022-2025)</p>
-                    </li>
-                    <li>
-                        <span>SMP Negeri 13 Tangerang</span>
-                        <p>(2018-2021)</p>
-                    </li>
+                    <a href="https://www.smkn1-tng.sch.id" target="_blank" class="education-item-link">
+                        <li>
+                            <span>SMK Negeri 1 Tangerang</span>
+                            <p>Desain Komunikasi Visual (DKV) - (2022-2025)</p>
+                        </li>
+                    </a>
+                    <a href="#" id="no-website-link" class="education-item-link">
+                        <li>
+                            <span>SMPIT Qurrata'ayun</span>
+                            <p>(2018-2021)</p>
+                        </li>
+                    </a>
                 </ul>
             </div>
 
             <div class="videos-card glass-card">
                 <h2 class="section-title-videos">Videos</h2>
                 <div class="videos-grid">
-                    <a href="video1.mp4" class="video-item lightbox-trigger" data-title="Guitar Cover" data-source-url="https://youtu.be/YhSiqgHC2fQ?si=T9H1O-5iUmLnhp9_">
-                        <video src="video1.mp4" autoplay muted loop playsinline class="video-item-thumb"></video>
+                    <!-- KUNCI PERBAIKAN: Menggunakan format tautan embed dan thumbnail yang benar -->
+                    <a href="https://www.youtube.com/embed/PaXUHqW2AK8?autoplay=1" class="video-item lightbox-trigger" data-type="youtube" data-title="Guitar Cover" data-source-url="https://youtu.be/PaXUHqW2AK8?si=4-tPBCA7jBWLrawB">
+                        <img src="https://img.youtube.com/vi/PaXUHqW2AK8/mqdefault.jpg" alt="Guitar Cover Thumbnail" class="video-item-thumb">
                         <div class="video-item-overlay"></div>
                         <span>Guitar Cover</span>
                     </a>
-                    <a href="video2.mp4" class="video-item lightbox-trigger" data-title="AMV" data-source-url="https://youtu.be/93C1MVgwxB4?si=GSjuqoS3VylLSJth">
-                        <video src="video2.mp4" autoplay muted loop playsinline class="video-item-thumb"></video>
+                    <a href="https://www.youtube.com/embed/93C1MVgwxB4?autoplay=1" class="video-item lightbox-trigger" data-type="youtube" data-title="AMV" data-source-url="https://youtu.be/93C1MVgwxB4?si=T3EdAK0PSiPAPKG1">
+                        <img src="https://img.youtube.com/vi/93C1MVgwxB4/mqdefault.jpg" alt="AMV Thumbnail" class="video-item-thumb">
                         <div class="video-item-overlay"></div>
                         <span>AMV</span>
                     </a>
-                    <a href="video3.mp4" class="video-item lightbox-trigger" data-title="Cinematic" data-source-url="https://www.instagram.com/reel/DQgC9atjOcB/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==">
-                        <video src="video3.mp4" autoplay muted loop playsinline class="video-item-thumb"></video>
+                    <a href="https://www.youtube.com/embed/hfftgVwLEuQ?autoplay=1" class="video-item lightbox-trigger" data-type="youtube" data-title="Content" data-source-url="https://youtu.be/hfftgVwLEuQ?si=lvG_S1v6IQFqa4nb">
+                        <img src="https://img.youtube.com/vi/hfftgVwLEuQ/mqdefault.jpg" alt="Content Thumbnail" class="video-item-thumb">
                         <div class="video-item-overlay"></div>
-                        <span>Cinematic</span>
+                        <span>Content</span>
                     </a>
-                    <a href="video4.mp4" class="video-item lightbox-trigger" data-title="Guitar Cover" data-source-url="https://youtu.be/PaXUHqW2AK8?si=bzKIW57Mmx9JLVCP">
-                        <video src="video4.mp4" autoplay muted loop playsinline class="video-item-thumb"></video>
+                    <a href="https://www.youtube.com/embed/YhSiqgHC2fQ?autoplay=1" class="video-item lightbox-trigger" data-type="youtube" data-title="Guitar Cover" data-source-url="https://youtu.be/YhSiqgHC2fQ?si=uiCYtPZRkh0bFnnU">
+                        <img src="https://img.youtube.com/vi/YhSiqgHC2fQ/mqdefault.jpg" alt="Guitar Cover Thumbnail" class="video-item-thumb">
                         <div class="video-item-overlay"></div>
                         <span>Guitar Cover</span>
                     </a>
@@ -78,25 +82,30 @@
             <div class="pictures-card glass-card">
                 <h2 class="section-title-pictures">Pictures</h2>
                 <div class="pictures-grid">
-                    <a href="IMG_0501.jpg" class="picture-item lightbox-trigger" data-title="Mountain Lake" data-source-url="https://www.pexels.com/photo/2662116/">
-                        <img src="IMG_0501.jpg" alt="Mountain lake thumbnail" class="picture-item-thumb">
+                    <a href="IMG_0501.jpg" class="picture-item lightbox-trigger" data-type="image" data-title="Me" data-source-url="#">
+                        <img src="IMG_0501.jpg" alt="My Picture" class="picture-item-thumb">
                         <div class="picture-item-overlay"></div>
                         <span>Me</span>
                     </a>
-                    <a href="IMG_8623.jpg" class="picture-item lightbox-trigger" data-title="Winter Road" data-source-url="https://www.pexels.com/photo/2356045/">
-                        <img src="IMG_8623.jpg" alt="Winter road thumbnail" class="picture-item-thumb">
+                    <a href="IMG_8623.jpg" class="picture-item lightbox-trigger" data-type="image" data-title="Totebag Design" data-source-url="#">
+                        <img src="IMG_8623.jpg" alt="Totebag Design" class="picture-item-thumb">
                         <div class="picture-item-overlay"></div>
                         <span>Totebag</span>
                     </a>
-                    <a href="IMG_8651.jpg" class="picture-item lightbox-trigger" data-title="Antelope Canyon" data-source-url="https://www.pexels.com/photo/33041/">
-                        <img src="IMG_8651.jpg" alt="Canyon thumbnail" class="picture-item-thumb">
+                    <a href="IMG_8651.jpg" class="picture-item lightbox-trigger" data-type="image" data-title="Totebag Design" data-source-url="#">
+                        <img src="IMG_8651.jpg" alt="Totebag Design" class="picture-item-thumb">
                         <div class="picture-item-overlay"></div>
                         <span>Totebag</span>
                     </a>
-                    <a href="IMG_9403.jpg" class="picture-item lightbox-trigger" data-title="Hot Air Balloons" data-source-url="https://www.pexels.com/photo/417344/">
-                        <img src="IMG_9403.jpg" alt="Hot air balloons thumbnail" class="picture-item-thumb">
+                    <a href="IMG_9403.jpg" class="picture-item lightbox-trigger" data-type="image" data-title="Taekwondo" data-source-url="#">
+                        <img src="IMG_9403.jpg" alt="Taekwondo Match" class="picture-item-thumb">
                         <div class="picture-item-overlay"></div>
-                        <span>Taekwondoo</span>
+                        <span>Taekwondo</span>
+                    </a>
+                    <a href="IMG_0501.jpg" class="picture-item lightbox-trigger" data-type="image" data-title="Me" data-source-url="#">
+                        <img src="IMG_0501.jpg" alt="My Picture" class="picture-item-thumb">
+                        <div class="picture-item-overlay"></div>
+                        <span>Me</span>
                     </a>
                 </div>
             </div>
@@ -150,6 +159,7 @@
                 <a href="#" id="lightbox-source-link" target="_blank">View Source</a>
             </div>
             <div class="lightbox-media-wrapper">
+                <iframe id="lightbox-youtube" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <video id="lightbox-video" src="" controls playsinline></video>
                 <img id="lightbox-img" src="" alt="Enlarged view">
             </div>
@@ -157,7 +167,14 @@
         <span class="lightbox-close">&times;</span>
     </div>
 
+    <!-- Alert Modal -->
+    <div id="alert-modal" class="alert-modal">
+        <div class="alert-content glass-card">
+            <p>Maaf, tidak ada website untuk satu ini.</p>
+            <button id="alert-close-btn">Tutup</button>
+        </div>
+    </div>
+
     <script src="document.js"></script>
 </body>
 </html>
-
