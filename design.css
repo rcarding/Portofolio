@@ -87,6 +87,8 @@ body::before {
                 box-shadow 0.3s ease, 
                 border-color 0.3s ease;
     will-change: transform;
+    display: flex;
+    flex-direction: column;
 }
 
 .glass-card:hover {
@@ -137,7 +139,7 @@ body::before {
 .banner-text { font-size: 1.1em; margin: 0; color: var(--text-color); }
 
 /* --- Tipografi --- */
-.title, .section-title-desktop, .section-title-pictures, .section-title-photograph, .section-title-videos {
+.title, .section-title-desktop, .section-title-pictures, .section-title-photograph, .section-title-videos, .section-title-education {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: var(--title-color);
@@ -145,14 +147,17 @@ body::before {
     letter-spacing: 1.5px;
     text-align: center;
     margin-top: 0;
+    flex-shrink: 0;
 }
 .title { font-size: 2.5em; margin-bottom: 25px; }
-.section-title-desktop, .section-title-pictures, .section-title-photograph, .section-title-videos { font-size: 1.8em; margin-bottom: 20px; }
+.section-title-desktop, .section-title-pictures, .section-title-photograph, .section-title-videos, .section-title-education { font-size: 1.8em; margin-bottom: 20px; }
 
 /* --- Gaya Tautan & Item Media Interaktif --- */
 .social-link, .picture-item, .video-item { text-decoration: none; }
 .social-link {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -162,6 +167,7 @@ body::before {
     border-radius: 12px;
     padding: 15px;
     transition: all 0.3s ease-in-out;
+    flex-grow: 1;
 }
 .social-link:hover {
     color: var(--title-color);
@@ -170,12 +176,19 @@ body::before {
     transform: translateY(-5px) scale(1.03);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
-.pictures-grid, .videos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+.pictures-grid, .videos-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    /* KUNCI PERBAIKAN: Membuat baris di dalam grid meregang */
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px; 
+    flex-grow: 1;
+}
 
 .picture-item, .video-item {
     position: relative;
     border: 1px solid var(--border-color);
-    height: 100px; 
+    min-height: 100px; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,9 +236,9 @@ body::before {
     box-shadow: 0 0 15px rgba(0, 217, 255, 0.4);
 }
 
-/* --- Gaya Panel Device & Software --- */
-.device-list { list-style: none; padding: 0; margin: 0; }
-.device-list li {
+/* --- Gaya Panel Device & Software & Edukasi --- */
+.device-list, .education-list { list-style: none; padding: 0; margin: 0; }
+.device-list li, .education-list li {
     background-color: rgba(0, 0, 0, 0.15);
     padding: 12px 15px;
     border-radius: 8px;
@@ -233,28 +246,27 @@ body::before {
     border: 1px solid transparent;
     transition: all 0.3s ease;
 }
-.device-list li:last-child { margin-bottom: 0; }
-.device-list li:hover { border-color: var(--link-color); transform: translateX(5px); }
-.device-list li span { 
+.device-list li:last-child, .education-list li:last-child { margin-bottom: 0; }
+.device-list li:hover, .education-list li:hover { border-color: var(--link-color); transform: translateX(5px); }
+.device-list li span, .education-list li span { 
     font-weight: 600; 
     color: var(--title-color);
     margin-bottom: 5px;
     display: inline-block;
 }
+.education-list p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+}
 
-/* --- Tata Letak Panel Kiri & Kanan --- */
-.left-panel, .right-panel { display: flex; flex-direction: column; gap: var(--gap-size); }
-
-/* KUNCI PERBAIKAN: Mengatur urutan untuk tampilan mobile */
-.about-section {
-    order: 1;
-}
-.left-panel {
-    order: 2;
-}
-.right-panel {
-    order: 3;
-}
+/* Mengatur urutan untuk tampilan mobile */
+.about-section { order: 1; }
+.education-card { order: 2; }
+.pictures-card { order: 3; }
+.videos-card { order: 4; }
+.social-card { order: 5; }
+.device-card { order: 6; }
 
 /* --- Gaya Lightbox --- */
 .lightbox {
@@ -264,7 +276,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(0, 0, 0, 0.363);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -297,6 +309,11 @@ body::before {
     opacity: 0;
     transition: opacity 0.3s ease 0.2s;
     border-radius: 18px;
+}
+.lightbox-header + .lightbox-media-wrapper #lightbox-video,
+.lightbox-header + .lightbox-media-wrapper #lightbox-img {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 .lightbox.show #lightbox-video, .lightbox.show #lightbox-img {
     opacity: 1;
@@ -360,23 +377,25 @@ body::before {
 /* --- Tata Letak Desktop --- */
 @media (min-width: 1024px) {
     .main-content {
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        /* KUNCI PERBAIKAN: Menggunakan 'stretch' untuk menyamakan tinggi baris */
         align-items: stretch;
     }
-    /* KUNCI PERBAIKAN: Mereset urutan untuk tampilan desktop */
-    .left-panel { 
-        flex: 1; 
-        order: 0;
+    .videos-card { grid-column: 1; grid-row: 1; order: 0; }
+    .device-card { grid-column: 1; grid-row: 2; order: 0; }
+    .about-section { grid-column: 2; grid-row: 1; order: 0; }
+    .education-card { grid-column: 2; grid-row: 2; order: 0; }
+    .social-card { grid-column: 3; grid-row: 1; order: 0; }
+    .pictures-card { grid-column: 3; grid-row: 2; order: 0; }
+    
+    .social-links-container-desktop { 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; /* Membuat baris di dalam grid meregang */
+        gap: 15px; 
+        flex-grow: 1;
     }
-    .about-section { 
-        flex: 2; 
-        order: 0;
-    }
-    .right-panel { 
-        flex: 1; 
-        order: 0;
-    }
-    .social-links-container-desktop { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-    .picture-item, .video-item { height: 120px; }
+    .picture-item, .video-item { min-height: 120px; }
     .banner-title { font-size: 2.8em; }
 }
